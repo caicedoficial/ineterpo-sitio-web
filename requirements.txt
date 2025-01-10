@@ -1,0 +1,5 @@
+django
+django-compressor
+django-browser-reload
+whiteNoise
+Pillow
