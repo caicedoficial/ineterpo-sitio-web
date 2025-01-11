@@ -2,10 +2,21 @@ from django.db import models
 from uuid import uuid4
 import os
 
+TIPOS_NOTICIAS = (
+    ('General', 'General'),
+    ('Politica', 'Política'),
+    ('Economia', 'Economía'),
+    ('Comunicado Oficial', 'Comunicado Oficial'),
+    ('Deportes', 'Deportes'),
+    ('Cultura', 'Cultura'),
+    ('Tecnologia', 'Tecnología'),
+)
+
 class Noticias(models.Model):
-    titulo = models.CharField("Titulo",max_length=100)
+    titulo = models.CharField("Titulo", max_length=100)
     descripcion = models.TextField("Descripción")
     fecha = models.DateField(auto_now=True)
+    tipo = models.CharField("Tipo de Noticia", max_length=20, choices=TIPOS_NOTICIAS, default='general')
 
     class Meta:
         verbose_name = "Noticia"

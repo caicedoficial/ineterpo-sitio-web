@@ -5,28 +5,31 @@
 
 {% block content %}
 
-<section id="noticias" class="flex gap-4 p-10">
-
-    {% for noticia in noticias %}
-
-        <div class="w-[20rem] h-[20rem] border-4 rounded-sm shadow-xl">
-
-            {% if noticia.imagenes %}
-
-            <div class="w-full h-[14rem]">
-                <img class="w-full h-full object-top object-cover" 
-                    src="{{ noticia.imagenes.first.imagen.url }}" alt="Imagen de la noticia {{ noticia.titulo }}">
-            </div>
+<div class="grid p-10 gap-5">
+    <article id="noticias" class="gap-4">
+        {% for noticia in noticias %}
+    
+            {% if forloop.first %}
+               <a href="" 
+                    class="block  bg-white primer-noticia relative w-[30rem] h-[31rem] shadow-xl rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out">
+                        {% include 'noticias/components/PrimerNoticiasSection.html' %}
+                </a>
+            {% else %}
+                <a href="" 
+                    class="block  bg-white otras-noticias relative w-[15rem] h-[15rem] shadow-xl rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out">
+                        {% include 'noticias/components/OtrasNoticiasSection.html' %}
+                </a>
             {% endif %}
-
-            <div class="p-3">
-                <h2>{{ noticia.titulo }}</h2>
-                <p>{{ noticia.descripcion }}</p>
-            </div>
-        </div>
-
-    {% endfor %}
-
-</section>
+    
+        {% endfor %}
+    </article>
+    
+    <section class="bg-pink-300 p-4">
+        <a href="" 
+            class="inline-block w-full font-bold text-xl text-white" >
+            Ver más noticias...
+        </a>
+    </section>
+</div>
 
 {% endblock %}

@@ -1,0 +1,19 @@
+<!-- Otras Noticias Section -->
+{% if noticia.imagenes %}
+
+    <div class="w-full h-[10rem]">
+
+        <img class="w-full h-full object-top object-cover" 
+            src="{{ noticia.imagenes.first.imagen.url }}" alt="Imagen de la noticia {{ noticia.titulo }}">
+    </div>
+
+{% endif %}
+
+    <small class="absolute top-0 right-0 p-1 font-semibold bg-[#0a4d0a] text-white text-xs lowercase"> {{ noticia.fecha }} </small>
+
+    <div class="grid box-border px-3 py-2">
+        <p class="font-normal text-sm text-red-700 leading-none"> {{ noticia.tipo }} </p>
+        <h2 class="font-semibold text-lg">{{ noticia.titulo }}</h2>
+        <p class="font-thin text-sm truncate">{{ noticia.descripcion }}</p>
+
+    </div>
