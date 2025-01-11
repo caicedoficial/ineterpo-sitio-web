@@ -10,9 +10,7 @@
             <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-            {% compress css %}
-                <link rel="stylesheet" href="{% static 'src/output.css' %}">
-            {% endcompress %}
+            <link rel="stylesheet" href="{% static 'src/output.css' %}">
 
              {% compress js %}
                 <script src="{% static 'js/header-nav.js' %}"></script>
@@ -23,7 +21,7 @@
 
         {% include 'header/header.html' %}
 
-        <main class="flex items-center justify-center">
+        <main class="bg-[#fafafa]">
             {% block content %}
             {% endblock %}
         </main>
