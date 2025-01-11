@@ -17,6 +17,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "noticias.apps.NoticiasConfig",
+    "eventos.apps.EventosConfig",
     "compressor",
     "django_browser_reload",
 ]
