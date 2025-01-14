@@ -1,8 +1,15 @@
-
 module.exports = {
   content: ["./templates/**/*.html"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#0a4d0a',
+        secundary: '#f9a8d4'
+      },
+      fontFamily: {
+        custom: 'Titulos',
+      },
+    },
   },
   plugins: [],
 };

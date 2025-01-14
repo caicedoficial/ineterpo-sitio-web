@@ -41,7 +41,9 @@ TEMPLATES = [
         "DIRS": [
             BASE_DIR / "templates",
             BASE_DIR / "templates/layout",
-            BASE_DIR / "templates/content",
+            BASE_DIR / "templates/content/hogar",
+            BASE_DIR / "templates/content/noticias",
+            BASE_DIR / "templates/content/eventos",
         ],
         "APP_DIRS": True,
         "OPTIONS": {
