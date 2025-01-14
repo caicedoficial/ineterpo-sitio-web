@@ -12,23 +12,7 @@
 }
 
 .items-hover {
-  @apply block bg-white shadow-xl rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out;
-}
-
-#noticias {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-}
-
-.primer-noticia {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.otras-noticias {
-  grid-column: span 1;
-  grid-row: span 1;
+  @apply block bg-white relative rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out;
 }
 
 @layer components {

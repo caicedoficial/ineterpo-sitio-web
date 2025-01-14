@@ -4,32 +4,25 @@
 {% block title %}Noticias{% endblock %}
 
 {% block content %}
-
-<div class="grid p-10 gap-5">
-    <article id="noticias" class="gap-4">
+<div class="grid gap-4 mx-auto">    
+    <section class="grid grid-cols-2 gap-4 mx-auto lg:grid-cols-5">
         {% for noticia in noticias %}
-    
-            {% if forloop.first %}
-               <a href="" 
-                    class="primer-noticia relative w-[30rem] h-[31rem] items-hover">
+            <article class="my-auto mx-auto {% if forloop.first %}col-span-2 row-span-2 w-[20.5rem] h-[20rem] lg:w-[30rem] lg:h-[30rem]{% else %}col-span-1 row-span-1 w-[10rem] h-[10rem] lg:w-[15rem] lg:h-[15rem]{% endif %} items-hover">
+                   <a href="">
+                    {% if forloop.first %}
                         {% include 'components/PrimerNoticiasSection.html' %}
-                </a>
-            {% else %}
-                <a href="" 
-                    class="otras-noticias relative w-[15rem] h-[15rem] items-hover">
+                    {% else %}
                         {% include 'components/OtrasNoticiasSection.html' %}
-                </a>
-            {% endif %}
-    
+                    {% endif %}
+                    </a>
+            </article>
         {% endfor %}
-    </article>
-    
+    </section>
     <section class="bg-secundary p-4">
         <a href="" 
-            class="inline-block w-full font-bold text-xl text-white" >
+            class="inline-block font-bold text-xl text-white" >
             Ver más noticias...
         </a>
     </section>
 </div>
-
 {% endblock %}

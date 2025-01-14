@@ -9,6 +9,7 @@ class ImagenesNoticiasAdmin(admin.TabularInline):
 class NoticiasAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'fecha')
     search_fields = ('titulo', 'fecha')
+    ordering = ['-fecha']
     inlines = [ImagenesNoticiasAdmin]
 
 admin.site.register(Noticias, NoticiasAdmin)

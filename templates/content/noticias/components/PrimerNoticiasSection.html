@@ -1,33 +1,19 @@
-<!-- Primer Noticia Section -->
 {% load static %}
-
-{% if noticia.imagenes %}
-        <div class="w-full h-[25rem]">
-            <img class="w-full h-full object-top object-cover" 
-                src="
-                {% if noticia.imagenes.firts.imagen.url %} 
-                    {{ noticia.imagenes.first.imagen.url }}
-                {% else %} 
-                    {% static 'images/ineterpo.webp' %}
-                {% endif %}" 
-                alt="Imagen de la noticia {{ noticia.titulo }}">
-        </div>
+<!-- Primer Noticia Section -->
+<div class="w-full h-[14.5rem] lg:h-[25rem]">
+{% if noticia.imagenes.first.imagen %}
+    <img class="w-full h-full object-top object-cover" 
+        src="{{ noticia.imagenes.first.imagen.url }}"
+        alt="Imagen de la noticia {{ noticia.titulo }}">
+{% else%}
+    <img class="w-full h-full object-top object-cover" 
+        src="{% static 'images/ineterpo.webp' %}"
+        alt="Imagen de la noticia {{ noticia.titulo }}">
 {% endif %}
-<<<<<<< HEAD
-    <small class="absolute bg-[#0a4d0a] p-2 text-white font-bold top-0 right-0 lowercase"> {{ noticia.fecha }} </small>
-
-    <div class="grid box-border p-3">
-
-        <p class="font-normal text-sm text-red-700 leading-none">{{ noticia.tipo }}</p>
-        <h2 class="font-bold text-2xl">{{ noticia.titulo }}</h2>
-        <p class="font-thin text-base truncate">{{ noticia.descripcion }}</p>
-
-    </div>
-=======
-<small class="absolute bg-primary p-2 text-white top-0 right-0 lowercase font-custom">{{ noticia.fecha }}</small>
-<div class="grid box-border p-3">
-    <p class="text-sm text-red-700 leading-none font-custom">{{ noticia.tipo }}</p>
-    <h2 class="font-semibold text-2xl font-custom">{{ noticia.titulo }}</h2>
-    <p class="text-base truncate font-light">{{ noticia.descripcion }}</p>
 </div>
->>>>>>> 7dd543d3e730fc3fe460d9f475573ec8b800738e
+<small class="absolute bg-primary p-2 text-xs text-white top-0 right-0 lowercase"> {{ noticia.fecha|date }} </small>
+<div class="grid box-border px-3 border-t">
+    <p class="text-sm text-red-700 leading-7">{{ noticia.tipo }}</p>
+    <h2 class="font-semibold text-2xl leading-none">{{ noticia.titulo }}</h2>
+    <p class="truncate font-light text-sm">{{ noticia.descripcion }}</p>
+</div>
