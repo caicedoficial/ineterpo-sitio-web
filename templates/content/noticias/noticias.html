@@ -11,20 +11,20 @@
     
             {% if forloop.first %}
                <a href="" 
-                    class="block  bg-white primer-noticia relative w-[30rem] h-[31rem] shadow-xl rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out">
-                        {% include 'noticias/components/PrimerNoticiasSection.html' %}
+                    class="primer-noticia relative w-[30rem] h-[31rem] items-hover">
+                        {% include 'components/PrimerNoticiasSection.html' %}
                 </a>
             {% else %}
                 <a href="" 
-                    class="block  bg-white otras-noticias relative w-[15rem] h-[15rem] shadow-xl rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out">
-                        {% include 'noticias/components/OtrasNoticiasSection.html' %}
+                    class="otras-noticias relative w-[15rem] h-[15rem] items-hover">
+                        {% include 'components/OtrasNoticiasSection.html' %}
                 </a>
             {% endif %}
     
         {% endfor %}
     </article>
     
-    <section class="bg-pink-300 p-4">
+    <section class="bg-secundary p-4">
         <a href="" 
             class="inline-block w-full font-bold text-xl text-white" >
             Ver más noticias...
