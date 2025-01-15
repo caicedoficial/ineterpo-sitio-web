@@ -7,12 +7,20 @@
   src: url('{% static "fonts/CormorantGaramond-SemiBold.ttf" %}') format('truetype');
 }
 
+.noticias {
+  box-shadow: 0 2px 10px 2px rgba(0, 0, 0, .2);
+}
+
+.noticias:hover {
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, .2);
+}
+
 .aliados-flex {
   @apply flex-shrink-0 flex-grow-0 basis-full h-full p-1 flex items-center justify-center;
 }
 
 .items-hover {
-  @apply block bg-white relative rounded-lg overflow-hidden hover:shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out;
+  @apply block bg-white relative rounded-lg overflow-hidden hover:-translate-y-1 transition-transform duration-300 ease-in-out;
 }
 
 @layer components {
@@ -21,7 +29,7 @@
   }
 
   .nav-link:hover {
-    @apply hover:text-pink-300 scale-105 transition-all duration-200 ease-in;
+    @apply hover:text-pink-300 scale-105 transition-all duration-200 ease-in-out;
   }
 
   .nav-link::before {

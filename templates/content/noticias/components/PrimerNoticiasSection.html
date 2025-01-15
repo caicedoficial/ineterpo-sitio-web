@@ -13,7 +13,7 @@
 </div>
 <small class="absolute bg-primary p-2 text-xs text-white top-0 right-0 lowercase"> {{ noticia.fecha|date }} </small>
 <div class="grid box-border px-3 border-t">
-    <p class="text-sm text-red-700 leading-8">{{ noticia.tipo }}</p>
+    <p class="text-sm font-normal text-red-700 leading-8 lg:leading-6">{{ noticia.tipo }}</p>
     <h2 class="text-[#1A1A40] font-semibold text-2xl leading-none">{{ noticia.titulo }}</h2>
-    <p class="text-[#4F4F4F] truncate font-light text-sm">{{ noticia.descripcion }}</p>
+    <p class="text-[#4F4F4F] truncate font-light text-sm leading-6 lg:leading-7 lg:text-base">{{ noticia.descripcion }}</p>
 </div>

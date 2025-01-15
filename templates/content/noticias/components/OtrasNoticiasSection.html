@@ -13,7 +13,7 @@
 </div>
 <small class="absolute top-0 right-0 p-1 lowercase bg-primary text-white text-[10px]"> {{ noticia.fecha|date }} </small>
 <div class="grid box-border px-2 border-t lg:px-3 lg:py-2">
-    <p class="font-normal text-[10px] text-red-700 leading-5"> {{ noticia.tipo }} </p>
-    <h2 class="text-[#1A1A40] font-semibold text-sm leading-none">{{ noticia.titulo }}</h2>
-    <p class="text-[#4F4F4F] text-[10px] truncate font-light">{{ noticia.descripcion }}</p>
+    <p class="font-normal text-[10px] text-red-700 leading-5 lg:text-[12px] lg:leading-4"> {{ noticia.tipo }} </p>
+    <h2 class="text-[#1A1A40] font-semibold text-sm leading-none lg:text-lg">{{ noticia.titulo }}</h2>
+    <p class="text-[#4F4F4F] text-[10px] truncate font-light lg:text-sm lg:leading-4">{{ noticia.descripcion }}</p>
 </div>

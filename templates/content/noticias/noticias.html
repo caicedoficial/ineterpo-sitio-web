@@ -7,7 +7,7 @@
 <div class="grid gap-4 mx-auto">    
     <section class="grid grid-cols-2 gap-4 mx-auto lg:grid-cols-5">
         {% for noticia in noticias %}
-            <article class="my-auto mx-auto {% if forloop.first %}col-span-2 row-span-2 w-[20.5rem] h-[20rem] lg:w-[30rem] lg:h-[30rem]{% else %}col-span-1 row-span-1 w-[10rem] h-[10rem] lg:w-[15rem] lg:h-[15rem]{% endif %} items-hover">
+            <article class="noticias my-auto mx-auto {% if forloop.first %}col-span-2 row-span-2 w-[20.5rem] h-[20rem] lg:w-[30rem] lg:h-[30rem]{% else %}col-span-1 row-span-1 w-[10rem] h-[10rem] lg:w-[15rem] lg:h-[15rem]{% endif %} items-hover">
                    <a href="">
                     {% if forloop.first %}
                         {% include 'components/PrimerNoticiasSection.html' %}
@@ -18,9 +18,9 @@
             </article>
         {% endfor %}
     </section>
-    <section class="bg-secundary p-4">
-        <a href="" 
-            class="inline-block font-bold text-xl text-white" >
+    <section class="mx-3 noticias rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 ease-in-out">
+        <a class="inline-block w-full h-full border semi-bold text-xl text-white bg-secundary p-2 text-center" 
+                href="" > 
             Ver más noticias...
         </a>
     </section>
