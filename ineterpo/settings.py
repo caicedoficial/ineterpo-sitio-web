@@ -1,4 +1,3 @@
-
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -18,6 +17,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "noticias.apps.NoticiasConfig",
     "eventos.apps.EventosConfig",
+    "implementaciones.apps.ImplementacionesConfig",
+    "institucional.apps.InstitucionalConfig",
     "compressor",
     "django_browser_reload",
 ]
@@ -43,7 +44,8 @@ TEMPLATES = [
             BASE_DIR / "templates/layout",
             BASE_DIR / "templates/content/hogar",
             BASE_DIR / "templates/content/noticias",
-            BASE_DIR / "templates/content/eventos",
+            BASE_DIR / "templates/content/general",
+            BASE_DIR / "templates/admin",
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -81,13 +83,18 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Configuración de internacionalización
 LANGUAGE_CODE = "es-co"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Bogota"
 
 USE_I18N = True
 
 USE_TZ = True
+
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
 
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
