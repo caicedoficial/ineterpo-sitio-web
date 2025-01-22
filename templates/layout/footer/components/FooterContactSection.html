@@ -1,0 +1,28 @@
+{% load static %}
+<!--Seccion de Contactos-->
+<section class="grid gap-2 justify-center lg:flex">
+    <div class="grid gap-3 border-secundary lg:border-l-2 lg:border-r-2 lg:px-6">
+        <div class="flex items-center gap-1.5 mx-auto lg:mx-0">
+            <img class="w-6 h-6 lg:w-7 lg:h-7" 
+                src="{% static 'icons/footer/contactos.svg' %}" alt="Icono de Contactos">
+            <h1 class="text-base font-semibold lg:text-lg">Contactos:</h1>
+        </div>
+        <div class="grid gap-2 font-thin">
+            <div class="flex items-center gap-1.5">
+                <img class="w-4 h-4 lg:w-5 lg:h-5"
+                src="{% static 'icons/footer/celular.svg' %}" alt="Icono de Celular">
+                <h1 class="text-sm lg:text-base">Celular: XXX-XXX-XXXX</h1>
+            </div>
+            <div class="flex items-center gap-1.5">
+                <img class="w-4 h-4 lg:w-5 lg:h-5"
+                    src="{% static 'icons/footer/email.svg' %}" alt="Icono de Email">
+                <h1 class="text-sm lg:text-base">Correo: ineterpo@example.com</h1>
+            </div>
+            <div class="flex items-center gap-1.5">
+                <img class="w-4 h-4 lg:w-5 lg:h-5"
+                    src="{% static 'icons/footer/ubicacion.svg' %}" alt="Icono de Ubicación">
+                <h1 class="text-sm lg:text-base">Dirección: KR XXX XXX XXXX</h1>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,23 @@
+{% extends 'index.html' %}{% block title %}General{% endblock %}
+
+{% block content %}
+
+<div class="grid gap-4 mx-4">
+    <section class="grid grid-cols-2 gap-4 mx-auto lg:grid-cols-5">
+        {% for objeto in objetos %}
+            <article class="sombra m-auto items-hover w-[10rem] h-[10rem] lg:w-[15rem] lg:h-[15rem]">
+                <a href="">
+                    {% include 'components/GeneralSection.html' %}
+                </a>
+            </article>
+        {% endfor %}
+    </section>
+    <section class="mx-3 rounded-lg overflow-hidden text-white hover:text-primary transition-color duration-300 ease-in-out lg:mx-4">
+        <a class="inline-block w-full h-full border font-semibold text-xl bg-secundary p-2 text-center" 
+                href=""> 
+            Ver más
+        </a>
+    </section>
+</div>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+msgid "Save"
+msgstr "Guardar"
+
+msgid "Save and add another"
+msgstr "Guardar y agregar otro"
+
+msgid "Save and continue editing"
+msgstr "Guardar y continuar editando"

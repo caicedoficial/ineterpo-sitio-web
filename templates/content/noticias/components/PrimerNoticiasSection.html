@@ -1,0 +1,21 @@
+<!-- Primer Noticia Section -->
+{% load static %}
+
+{% if noticia.imagenes %}
+        <div class="w-full h-[14rem] lg:h-[24rem]">
+            <img class="w-full h-full object-top object-cover" 
+                src="
+                {% if noticia.imagenes.firts.imagen.url %} 
+                    {{ noticia.imagenes.first.imagen.url }}
+                {% else %} 
+                    {% static 'images/ineterpo.webp' %}
+                {% endif %}" 
+                alt="Imagen de la noticia {{ noticia.titulo }}">
+        </div>
+{% endif %}
+<small class="absolute bg-primary p-2 text-white top-0 right-0 lowercase font-batang">{{ noticia.fecha|date }}</small>
+<div class="grid box-border p-3">
+    <p class="text-sm text-red-700 leading-none font-batang">{{ noticia.tipo }}</p>
+    <h2 class="text-2xl font-batang font-bold text-black lg:leading-1">{{ noticia.titulo }}</h2>
+    <p class="text-base truncate font-batang text-[#4F4F4F]">{{ noticia.descripcion }}</p>
+</div>

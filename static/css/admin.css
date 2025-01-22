@@ -1,0 +1,79 @@
+#header {
+    background: #1f1f1f;
+    color: #fff;
+    border-bottom: 1px solid #353535;
+}
+
+#branding h1 {
+    color: #fff;
+}
+
+#user-tools {
+    gap: 10px;
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background: #2d2d2d;
+}
+
+div.breadcrumbs {
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.button:hover, input[type=submit]:hover, input[type=button]:hover {
+    background: #3d3d3d;
+}
+
+.submit-row input:hover {
+    background: #0a4d0a;
+}
+
+.button.default, input[type=submit].default, .submit-row input.default {
+    background: #0a4d0a;
+}
+
+.button.default:hover, input[type=submit].default:hover, .submit-row input.default:hover {
+    background: #205067;
+}
+
+a:link, a:visited {
+    color: #fff;
+}
+
+/* Ocultar el selector de tema */
+.theme-toggle {
+    display: none !important;
+}
+
+/* Ajustes para inputs y selects */
+input[type="text"], 
+input[type="password"], 
+input[type="email"], 
+input[type="number"], 
+input[type="tel"], 
+input[type="url"], 
+textarea, 
+select {
+    background: #121212 !important;
+    border: 1px solid #353535 !important;
+    color: #fff !important;
+}
+
+/* Ajustes para tablas */
+thead th {
+    background: #1f1f1f !important;
+}
+
+.row1 {
+    background: #121212 !important;
+}
+
+.row2 {
+    background: #1a1a1a !important;
+}

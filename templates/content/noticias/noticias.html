@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}Noticias{% endblock %}
+
+{% block content %}
+<div class="grid gap-4 mx-auto">    
+    <section class="grid grid-cols-2 gap-4 mx-auto lg:grid-cols-5">
+        {% for noticia in noticias %}
+            <article class="sombra m-auto {% if forloop.first %}col-span-2 row-span-2 w-[20.5rem] h-[20rem] lg:w-[30rem] lg:h-[30rem]{% else %}col-span-1 row-span-1 w-[10rem] h-[10rem] lg:w-[15rem] lg:h-[15rem]{% endif %} items-hover">
+                   <a href="">
+                    {% if forloop.first %}
+                        {% include 'components/PrimerNoticiasSection.html' %}
+                    {% else %}
+                        {% include 'components/OtrasNoticiasSection.html' %}
+                    {% endif %}
+                    </a>
+            </article>
+        {% endfor %}
+    </section>
+    <section class="mx-3 rounded-lg overflow-hidden text-white hover:text-primary transition-color duration-300 ease-in-out lg:mx-4">
+        <a class="inline-block w-full h-full border font-semibold text-xl bg-secundary p-2 text-center" 
+                href=""> 
+            Ver más noticias
+        </a>
+    </section>
+</div>
+{% endblock %}

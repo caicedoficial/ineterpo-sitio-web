@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Batang';
+  src: url('../fonts/UnBatang.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'BatangBold';
+  src: url('../fonts/UnBatangBold.woff2') format('woff2');
+}
+
+.sombra {
+  box-shadow: 0 2px 10px 2px rgba(0, 0, 0, .1);
+}
+
+.aliados-flex {
+  @apply flex-shrink-0 flex-grow-0 basis-full h-full p-1 flex items-center justify-center;
+}
+
+.items-hover {
+  @apply block bg-white relative overflow-hidden hover:-translate-y-1 transition-transform duration-300 ease-in-out;
+}
+
+@layer components {
+  .nav-link {
+    @apply pt-2 pb-1 inline-block w-full text-[#f0f0f0] text-center;
+  }
+
+  .nav-link:hover {
+    @apply text-pink-300;
+  }
+
+  .nav-link::before {
+    @apply content-[''] absolute bottom-0 left-1/2 w-0 h-1 bg-pink-300 hover:w-full hover:left-0 transition-all duration-300 ease-in-out;
+  }
+}

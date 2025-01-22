@@ -1,0 +1,51 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Administración INETERPO') }}{% endblock %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/admin.css' %}">
+<style>
+    :root {
+        --primary: #79aec8;
+        --secondary: #0a4d0a;
+        --accent: #f5dd5d;
+        --primary-fg: #fff;
+        --body-fg: #eeeeee;
+        --body-bg: #121212;
+        --body-quiet-color: #e0e0e0;
+        --body-loud-color: #ffffff;
+        --header-color: #f9a8d4;
+        --header-branding-color: var(--accent);
+        --header-bg: #1f1f1f;
+        --header-link-color: var(--primary-fg);
+        --breadcrumbs-fg: #c4dce8;
+        --breadcrumbs-link-fg: var(--body-bg);
+        --breadcrumbs-bg: var(--primary);
+        --link-fg: #81d4fa;
+        --link-hover-color: #4ac1f7;
+        --link-selected-fg: #6f94c6;
+        --hairline-color: #272727;
+        --border-color: #353535;
+        --error-fg: #e35f5f;
+        --message-success-bg: #006b1b;
+        --message-warning-bg: #583305;
+        --message-error-bg: #570808;
+        --darkened-bg: #212121;
+        --selected-bg: #1b1b1b;
+        --selected-row: #00363a;
+        --close-button-bg: #333333;
+        --delete-button-bg: #ba2121;
+    }
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}" style="display: flex; align-items: center;">
+        <img src="{% static 'images/ineterpo.webp' %}" height="40px" alt="Logo" style="background-color: #fff; border-radius: 50%; padding: 5px; margin-right: 10px;">
+        <p style="color:#fff; font-weight:500; margin: 0; padding: 0;">Panel del Administración INETERPO</p>
+    </a>
+</h1>
+{% endblock %}
+

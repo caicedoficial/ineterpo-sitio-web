@@ -1,0 +1,5 @@
+django
+django-compressor
+whiteNoise
+Pillow
+django-storages[boto3]
