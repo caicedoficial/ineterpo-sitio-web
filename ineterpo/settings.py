@@ -16,9 +16,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "noticias.apps.NoticiasConfig",
-    "eventos.apps.EventosConfig",
-    "implementaciones.apps.ImplementacionesConfig",
-    "institucional.apps.InstitucionalConfig",
+    "general.apps.GeneralConfig",
     "compressor",
 ]
 
